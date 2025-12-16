@@ -216,13 +216,13 @@ const Winners = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <Trophy className="text-yellow-500 mx-auto mb-3" size={48} />
-                    <h1 className="text-5xl font-extrabold text-white tracking-tight">
+                <div className="text-center mb-10">
+                    <Trophy className="text-yellow-500 mx-auto mb-3" size={38} />
+                    <h1 className="text-4xl font-extrabold text-white tracking-tight">
                         And The Winners Are...
                     </h1>
                     <p className="mt-2 text-xl text-yellow-300">
@@ -282,7 +282,7 @@ const Winners = () => {
                                     <p className={`text-sm font-semibold mb-1 ${hasZeroVotes ? 'text-gray-400' : 'text-yellow-400'}`}>
                                         {winnerStatus}
                                     </p>
-                                    <h3 className={`text-3xl font-extrabold leading-tight ${hasZeroVotes ? 'text-gray-500' : 'text-white'}`}>
+                                    <h3 className={`text-2xl font-extrabold leading-tight ${hasZeroVotes ? 'text-gray-500' : 'text-white'}`}>
                                         {winnerName}
                                     </h3>
                                     <p className="mt-2 text-gray-400 text-sm">
