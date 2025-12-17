@@ -24,10 +24,10 @@ const LoadingSpinner = () => (
         </div>
         
         <p className="mt-4 text-xl font-semibold text-amber-950 tracking-wider">
-            Loading and Tallying Votes...
+            Loading...
         </p>
         <p className="text-sm text-gray-700">
-            A moment while we determine the winners.
+           The global stage for celebrating greatness across every field.
         </p>
     </div>
 );
