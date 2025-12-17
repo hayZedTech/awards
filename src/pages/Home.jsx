@@ -6,24 +6,24 @@ const Home = () => {
   return (
     <div className="bg-white">
       {/* --- HERO SECTION --- */}
-      <section className="relative bg-gray-900 text-white overflow-hidden">
+      <section className="relative bg-violet-50 text-white overflow-hidden">
         {/* Abstract Background Design */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-full px-4 py-1 mb-8">
+          <div className="inline-flex items-center gap-2 bg-amber-800 border border-gray-700 rounded-full px-4 py-1 mb-8">
             <Star size={16} className="text-yellow-500 fill-yellow-500" />
-            <span className="text-sm font-medium text-gray-300">The 2025 Excellence Awards</span>
+            <span className="text-sm font-medium text-gray-50">The 2025 Excellence Awards</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-            Celebrate <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Greatness</span>
+            <span className='text-amber-600'>Celebrate</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Greatness</span>
           </h1>
           
-          <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+          <p className="mt-4 text-xl text-black max-w-2xl mx-auto mb-10">
             Recognizing the visionaries, innovators, and leaders shaping our future. Cast your vote and help us crown this year's champions.
           </p>
           
@@ -31,7 +31,7 @@ const Home = () => {
             <Link to="/vote" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-gray-900 bg-yellow-500 hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg shadow-yellow-500/30">
               Vote Now <ArrowRight className="ml-2" size={20} />
             </Link>
-            <Link to="/winners" className="inline-flex items-center justify-center px-8 py-3 border border-gray-600 text-base font-bold rounded-full text-white hover:bg-gray-800 transition">
+            <Link to="/winners" className="inline-flex items-center justify-center px-8 py-3 border border-amber-600 text-base font-bold rounded-full text-white bg-amber-800 hover:bg-amber-600 transition">
               View Past Winners
             </Link>
           </div>

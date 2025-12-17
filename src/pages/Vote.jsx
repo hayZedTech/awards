@@ -261,7 +261,7 @@ const Vote = () => {
               className={`w-full flex items-center justify-center font-semibold py-3 px-4 rounded-xl transition-all shadow-sm ${
                 isSendingMagicLink
                   ? 'bg-gray-400 text-white cursor-not-allowed'
-                  : 'bg-yellow-500 text-white hover:bg-yellow-600 gap-2' // Keep gap-2 only when not loading
+                  : 'bg-amber-600 text-white hover:bg-amber-700 gap-2' // Keep gap-2 only when not loading
               }`}
             >
               {isSendingMagicLink ? (

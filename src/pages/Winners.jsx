@@ -33,7 +33,7 @@ const supabaseFetch = async (endpoint) => {
 
 // Simple loading component
 const LoadingSpinner = () => (
-    <div className="flex flex-col justify-center items-center py-24 bg-gray-900">
+    <div className="flex flex-col justify-center items-center py-24 bg-amber-50">
         
         {/* The new, stylish spinner container */}
         <div className="relative w-24 h-24 mb-4">
@@ -44,7 +44,7 @@ const LoadingSpinner = () => (
                           rounded-full 
                           w-full h-full 
                           border-8 border-t-8 border-b-8 
-                          border-gray-700 border-t-yellow-500 border-b-green-500
+                          border-amber-700 border-t-yellow-500 border-b-green-500
                           shadow-xl shadow-yellow-500/50"
             ></div>
             
@@ -54,10 +54,10 @@ const LoadingSpinner = () => (
             </div>
         </div>
         
-        <p className="mt-4 text-xl font-semibold text-white tracking-wider">
+        <p className="mt-4 text-xl font-semibold text-amber-950 tracking-wider">
             Loading and Tallying Votes...
         </p>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-700">
             A moment while we determine the winners.
         </p>
     </div>
@@ -216,16 +216,16 @@ const Winners = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-amber-50 py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header */}
                 <div className="text-center mb-10">
                     <Trophy className="text-yellow-500 mx-auto mb-3" size={38} />
-                    <h1 className="text-4xl font-extrabold text-white tracking-tight">
+                    <h1 className="text-4xl font-extrabold text-amber-900 tracking-tight">
                         And The Winners Are...
                     </h1>
-                    <p className="mt-2 text-xl text-yellow-300">
+                    <p className="mt-2 text-xl text-yellow-600">
                         Celebrating the best across all categories.
                     </p>
                 </div>
@@ -244,7 +244,7 @@ const Winners = () => {
 
                         let winnerStatus = "Winner";
                         let winnerName = item.winner.name;
-                        let headerBg = "bg-green-600";
+                        let headerBg = "bg-amber-800";
                         let mainIcon = <Trophy className="inline mr-1" size={20} />;
                         
                         // --- TIE DETECTION AND STATUS ASSIGNMENT ---
@@ -252,13 +252,13 @@ const Winners = () => {
                             // Check if the winner name contains the join character '&' (implies a tie)
                             if (winnerName.includes(' & ')) {
                                 winnerStatus = "TIE!";
-                                headerBg = "bg-yellow-600"; 
+                                headerBg = "bg-amber-600"; 
                                 mainIcon = <Users className="inline mr-1" size={20} />;
                             }
                         } else {
                             winnerStatus = "Pending";
                             winnerName = "No Votes Cast";
-                            headerBg = "bg-gray-700"; 
+                            headerBg = "bg-amber-400"; 
                             mainIcon = <Zap className="inline mr-1" size={20} />;
                         }
                         
@@ -267,7 +267,7 @@ const Winners = () => {
                         return (
                             <div 
                                 key={index} 
-                                className="flex flex-col bg-gray-800 rounded-xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+                                className="flex flex-col bg-white rounded-xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
                             >
                                 {/* Category Header */}
                                 <div className={`p-4 rounded-t-xl ${headerBg} text-white`}>
@@ -279,21 +279,21 @@ const Winners = () => {
                                 
                                 {/* Winner / Status Body */}
                                 <div className="p-5 flex-grow">
-                                    <p className={`text-sm font-semibold mb-1 ${hasZeroVotes ? 'text-gray-400' : 'text-yellow-400'}`}>
+                                    <p className={`text-xl text-center font-semibold mb-1 ${hasZeroVotes ? 'text-gray-400' : 'text-amber-400'}`}>
                                         {winnerStatus}
                                     </p>
-                                    <h3 className={`text-2xl font-extrabold leading-tight ${hasZeroVotes ? 'text-gray-500' : 'text-white'}`}>
+                                    <h3 className={`text-2xl font-extrabold leading-tight ${hasZeroVotes ? 'text-gray-500' : 'text-amber-950'}`}>
                                         {winnerName}
                                     </h3>
-                                    <p className="mt-2 text-gray-400 text-sm">
-                                        Total Votes: <strong className="text-white">{maxVotes}</strong>
+                                    <p className="mt-2 text-gray-700 text-sm">
+                                        Total Votes: <strong className="text-black">{maxVotes}</strong>
                                     </p>
                                 </div>
 
                                 {/* Detailed Tally Footer */}
-                                <div className="p-4 bg-gray-700 rounded-b-xl">
+                                <div className="p-4 bg-amber-700 rounded-b-xl">
                                     <details className="cursor-pointer">
-                                        <summary className="flex items-center justify-between font-semibold text-blue-300 hover:text-blue-200">
+                                        <summary className="flex items-center justify-between font-semibold text-white hover:text-blue-200">
                                             <span>Full Vote Breakdown ({votedNominees.length} Voted Nominees)</span>
                                             <ChevronDown size={16} className="ml-2" />
                                         </summary>
@@ -306,7 +306,7 @@ const Winners = () => {
                                                     <li 
                                                         key={nom.id} 
                                                         className={`flex justify-between items-center p-2 rounded-lg transition-colors 
-                                                            ${isTopResult ? 'bg-yellow-900 border-l-4 border-yellow-500' : 'bg-gray-800'}`
+                                                            ${isTopResult ? 'bg-amber-950 border-l-4 border-amber-900' : 'bg-gray-800'}`
                                                         }
                                                     >
                                                         <span className={`text-sm ${isTopResult ? 'font-bold text-white' : 'text-gray-300'}`}>
@@ -319,7 +319,7 @@ const Winners = () => {
                                                 );
                                             })}
                                             {votedNominees.length === 0 && (
-                                                <p className="text-sm text-gray-500 pt-2">No nominees received votes yet.</p>
+                                                <p className="text-sm text-white pt-2">No nominees received votes yet.</p>
                                             )}
                                         </ul>
                                     </details>
