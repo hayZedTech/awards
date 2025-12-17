@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
         <p className="mb-2">&copy; {new Date().getFullYear()} Award Nomination Platform. All rights reserved.</p>
         <p className="text-xs text-gray-600">
-          Designed by <span className="text-white">Azeez Ololade Musa</span> for Excellence.
+          Designed by <span className="text-white">Azeez Ololade Musa</span> 
         </p>
       </div>
     </footer>
