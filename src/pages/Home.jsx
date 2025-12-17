@@ -14,9 +14,9 @@ const Home = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 bg-amber-800 border border-gray-700 rounded-full px-4 py-1 mb-8">
+          <div className="inline-flex items-center gap-2 bg-amber-800 border border-amber-900 rounded-full px-4 py-1 mb-8">
             <Star size={16} className="text-yellow-500 fill-yellow-500" />
-            <span className="text-sm font-medium text-gray-50">The 2025 Excellence Awards</span>
+            <span className="text-sm font-medium text-gray-50">The {new Date().getFullYear()} Excellence Awards</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
@@ -24,7 +24,7 @@ const Home = () => {
           </h1>
           
           <p className="mt-4 text-xl text-black max-w-2xl mx-auto mb-10">
-            Recognizing the visionaries, innovators, and leaders shaping our future. Cast your vote and help us crown this year's champions.
+            Celebrating excellence across every stage, screen, and industry. Your vote honors the icons of today and the legends of tomorrow.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -42,7 +42,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
+            <h2 className="text-3xl font-bold text-amber-900">How It Works</h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
           </div>
 
@@ -52,10 +52,10 @@ const Home = () => {
               { step: '02', title: 'Cast Your Vote', desc: 'Support your favorites. Your voice matters in deciding the winner.' },
               { step: '03', title: 'Celebrate Winners', desc: 'Join us for the grand reveal of the champions.' },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-md transition">
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-md transition ">
                 <span className="absolute -right-4 -top-4 text-9xl font-bold text-gray-50 opacity-50 group-hover:text-yellow-50 transition">{item.step}</span>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{item.title}</h3>
-                <p className="text-gray-600 relative z-10">{item.desc}</p>
+                <h3 className="text-xl font-bold text-amber-900 mb-3 relative z-10">{item.title}</h3>
+                <p className="text-amber-600 relative z-10">{item.desc}</p>
               </div>
             ))}
           </div>

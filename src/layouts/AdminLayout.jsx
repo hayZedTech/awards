@@ -25,6 +25,11 @@ const AdminLayout = ({ children, onLogout }) => {
   // Helper to check active state (ignoring query params)
   const isActive = (path) => location.pathname === path;
 
+  // Home
+  const homekey=()=>{
+    navigate("/");
+  }
+
   return (
     <div className="flex h-screen bg-gray-100 overflow-hidden">
       
@@ -63,6 +68,8 @@ const AdminLayout = ({ children, onLogout }) => {
           ))}
         </nav>
 
+        
+
         {/* Logout Button (Bottom) */}
         <div className="absolute bottom-0 w-full p-4 border-t border-gray-800">
           <button 
@@ -90,8 +97,8 @@ const AdminLayout = ({ children, onLogout }) => {
           </h1>
 
           <div className="flex items-center gap-3">
-             <div className="h-8 w-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-sm">
-                A
+             <div className="h-10 w-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-xs">
+                <button onClick={homekey}>Home</button>
              </div>
           </div>
         </header>
