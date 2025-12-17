@@ -291,7 +291,7 @@ const Winners = () => {
                                 </div>
 
                                 {/* Detailed Tally Footer */}
-                                <div className="p-4 bg-amber-700 rounded-b-xl">
+                                <div className="p-4 bg-amber-500 rounded-b-xl">
                                     <details className="cursor-pointer">
                                         <summary className="flex items-center justify-between font-semibold text-white hover:text-blue-200">
                                             <span>Full Vote Breakdown ({votedNominees.length} Voted Nominees)</span>
