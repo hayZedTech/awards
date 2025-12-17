@@ -22,7 +22,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold tracking-wider">
             <Award className="text-yellow-500" size={28} />
-            <span>AWARD<span className="text-yellow-500">APP</span></span>
+            <span>AWARD<span className="text-yellow-500"> APP</span></span>
           </Link>
 
           {/* Desktop Links */}
