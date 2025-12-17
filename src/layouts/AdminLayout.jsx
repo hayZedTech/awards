@@ -97,8 +97,8 @@ const AdminLayout = ({ children, onLogout }) => {
           </h1>
 
           <div className="flex items-center gap-3">
-             <div className="h-10 w-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-xs">
-                <button onClick={homekey}>Home</button>
+             <div className="">
+                <button onClick={homekey} className='h-10 w-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-xs'>Home</button>
              </div>
           </div>
         </header>
