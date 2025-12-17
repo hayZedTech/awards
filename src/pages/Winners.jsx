@@ -258,7 +258,7 @@ const Winners = () => {
                         } else {
                             winnerStatus = "Pending";
                             winnerName = "No Votes Cast";
-                            headerBg = "bg-amber-400"; 
+                            headerBg = "bg-amber-700"; 
                             mainIcon = <Zap className="inline mr-1" size={20} />;
                         }
                         
