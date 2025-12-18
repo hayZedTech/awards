@@ -216,7 +216,7 @@ const Vote = () => {
             <Trophy className="text-yellow-600" size={40} />
           </div>
           <h1 className="text-3xl font-bold text-amber-900 mb-2">Voice Your Choice</h1>
-          <p className="text-amber-500 mb-8">To ensure fair voting, please sign in to access the ballot.</p>
+          <p className="text-amber-600 mb-8">To ensure fair voting, please sign in to access the ballot.</p>
           
           {/* Google Sign-in */}
           <button 
