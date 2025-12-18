@@ -210,12 +210,12 @@ const Vote = () => {
   // --- LOGIN SCREEN (If not authenticated) ---
   if (!session) {
     return (
-      <div className="min-h-screen bg-amber-100 flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen bg-amber-100 flex flex-col items-center justify-center p-4 ">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
           <div className="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
             <Trophy className="text-yellow-600" size={40} />
           </div>
-          <h1 className="text-3xl font-bold text-amber-900 mb-2">Voice Your Choice</h1>
+          <h1 className="text-3xl font-bold text-amber-900 mb-2">Voice Your Choice </h1>
           <p className="text-amber-600 mb-8">To ensure fair voting, please sign in to access the ballot.</p>
           
           {/* Google Sign-in */}
