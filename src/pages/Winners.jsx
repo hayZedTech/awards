@@ -233,20 +233,20 @@ const Winners = () => {
                 )}
                 
                 {/* Categories Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
                     {results.map((item, index) => {
                         const winnerVotes = item.winner.voteCount;
                         const hasZeroVotes = item.totalVotes === 0;
 
                         let winnerStatus = "Winner";
                         let winnerName = item.winner.name;
-                        let headerBg = "bg-amber-800";
+                        let headerBg = "bg-amber-700";
                         let mainIcon = <Trophy className="inline mr-1" size={20} />;
                         
                         if (winnerVotes > 0) {
                             if (winnerName.includes(' & ')) {
                                 winnerStatus = "TIE!";
-                                headerBg = "bg-amber-600"; 
+                                headerBg = "bg-amber-700"; 
                                 mainIcon = <Users className="inline mr-1" size={20} />;
                             }
                         } else {
@@ -261,7 +261,7 @@ const Winners = () => {
                         return (
                             <div 
                                 key={index} 
-                                className="flex flex-col bg-white rounded-xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+                                className="flex flex-col bg-white rounded-xl shadow-2xl shadow-amber-800 transition-all duration-300 hover:scale-[1.02]"
                             >
                                 {/* Category Header */}
                                 <div className={`p-4 rounded-t-xl ${headerBg} text-white`}>
